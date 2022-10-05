@@ -89,7 +89,7 @@ public class Polynomial {
 			while(line.charAt(ind) != 'x'|| line.charAt(ind) != '+'|| line.charAt(ind) != '-'){
 				//System.out.println("\n Coef \n");
 				if(line.charAt(ind) == 'x'|| line.charAt(ind) == '+'|| line.charAt(ind)== '-'){
-					System.out.println("theres a thing ");
+					//System.out.println("theres a thing ");
 					break;
 				}
 				ctemp = ctemp + line.charAt(ind);
