@@ -74,8 +74,8 @@ public class Polynomial {
 
 			if(line.charAt(ind)== '-'){ //if the coefficient is negative
 				ctemp = ctemp + '-';
-				System.out.println("has neg: " + line.charAt(ind));
-				System.out.println("ctemp: " + ctemp);
+				//System.out.println("has neg: " + line.charAt(ind));
+				//System.out.println("ctemp: " + ctemp);
 
 				ind = ind + 1;
 				//System.out.println("ind in neg coef case " + ind);
