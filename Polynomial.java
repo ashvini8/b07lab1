@@ -87,52 +87,52 @@ public class Polynomial {
 
 			
 			while(line.charAt(ind) != 'x'|| line.charAt(ind) != '+'|| line.charAt(ind) != '-'){
-				System.out.println("\n Coef \n");
+				//System.out.println("\n Coef \n");
 				if(line.charAt(ind) == 'x'|| line.charAt(ind) == '+'|| line.charAt(ind)== '-'){
 					System.out.println("theres a thing ");
 					break;
 				}
 				ctemp = ctemp + line.charAt(ind);
-				System.out.println("ind in blocking case " + ind);
-				System.out.println("the line char is " + line.charAt(ind));
+				//System.out.println("ind in blocking case " + ind);
+				//System.out.println("the line char is " + line.charAt(ind));
 
-				System.out.println("ctemp: " + ctemp);//3
-				System.out.println("this i : " + i);
+				//System.out.println("ctemp: " + ctemp);//3
+				//System.out.println("this i : " + i);
 
 
 				ind = ind + 1;
 
 				if(ind >= line_len){
 
-					System.out.println("is broken cause ind is " + ind + " and line len is " + line_len);
+					//System.out.println("is broken cause ind is " + ind + " and line len is " + line_len);
 					break outerloop;
 				}
 			}
-			System.out.println("final ctemp: " + ctemp);
+			//System.out.println("final ctemp: " + ctemp);
 			fcoef[i] = Double.parseDouble(ctemp);
 			
 			
 
-			System.out.println("fceof rn \n" + fcoef[i]);
+			//System.out.println("fceof rn \n" + fcoef[i]);
 
 			//for exponents
 
-			System.out.println("\n Exponent \n");
+			//System.out.println("\n Exponent \n");
 
 			etemp = "";
 
-			System.out.println("what char we are at: " + line.charAt(ind));
-			System.out.println("ind: " + ind);
+			//System.out.println("what char we are at: " + line.charAt(ind));
+			//System.out.println("ind: " + ind);
 
 			if(line.charAt(ind) != 'x'){
-				System.out.println("this is the char tha is not x");
+				//System.out.println("this is the char tha is not x");
 				//then it was just a coeffecient so the exponent would be 0
 				fexpon[i] = 0;
 				if(line.charAt(ind) == '-'){
-					System.out.println("next coef is neg");
+					//System.out.println("next coef is neg");
 					prior_coef = 1;
 				}else{
-					System.out.println("next coef is POSTIVE");
+					//System.out.println("next coef is POSTIVE");
 					prior_coef = 0;
 				}
 				ind = ind + 1;
@@ -145,16 +145,16 @@ public class Polynomial {
 				ind = ind + 1;
 				//System.out.println("what extra char we are at: " + line.charAt(ind));
 				while(line.charAt(ind)!= '+' || line.charAt(ind)!= '-'){
-					System.out.println("char at now exp: " + line.charAt(ind)); //- 
+					//System.out.println("char at now exp: " + line.charAt(ind)); //- 
 					
 					if(line.charAt(ind)== '+' || line.charAt(ind)== '-'){
-						System.out.println("there's a thing");
+						//System.out.println("there's a thing");
 						//add the negative to the next coef
 						if(line.charAt(ind) == '-'){
-							System.out.println("next coef is neg");
+							//System.out.println("next coef is neg");
 							prior_coef = 1;
 						}else{
-							System.out.println("next coef is POSTIVE");
+							//System.out.println("next coef is POSTIVE");
 							prior_coef = 0;
 						}
 						ind = ind + 1;
@@ -162,14 +162,14 @@ public class Polynomial {
 					}
 					etemp = etemp + line.charAt(ind);
 					ind = ind + 1;
-					System.out.println("ind in exp while x: " + ind);
+					//System.out.println("ind in exp while x: " + ind);
 					if(ind >= line_len){
 						break outerloop;
 					}
 				}
 
-				System.out.println("this is final etemp: " + etemp);	
-				System.out.println("ind is: " + ind);
+				//System.out.println("this is final etemp: " + etemp);	
+				//System.out.println("ind is: " + ind);
 				fexpon[i] = Integer.parseInt(etemp);
 
 			}
@@ -178,7 +178,7 @@ public class Polynomial {
 		}//end of for
 
 		if(ind == line_len){
-			System.out.println("this is cemp when taken: " + ctemp);
+			//System.out.println("this is cemp when taken: " + ctemp);
 			fcoef[terms - 1] = Double.parseDouble(ctemp);
 			//System.out.println("this is etemp: " + etemp);
 			if(etemp == ""){
@@ -201,13 +201,13 @@ public class Polynomial {
 		}
 		input.close();
 
-		System.out.println("\n Printing the coeficents and exponents");
+		//System.out.println("\n Printing the coeficents and exponents");
 		//printing the array
 		for(int j = 0; j < terms; j++){
-			System.out.println("this is fcoef: " + fcoef[j]);
+			//System.out.println("this is fcoef: " + fcoef[j]);
 		}
 		for(int j = 0; j < terms; j++){
-			System.out.println("this is fexpon: " + fexpon[j]);
+			//System.out.println("this is fexpon: " + fexpon[j]);
 		}
 
 		//coefficient = new double[inputc.length];
